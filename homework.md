@@ -10,24 +10,24 @@
 
 ## 2. What I Did
 
-For each deployment, I launched an EC2 instance using my saved launch template in AWS Oregon (`us-west-2`). I recorded the public IPv4 address, connected using SSH through Git Bash, ran `seir-dashboard`, captured a screenshot, and terminated the instance after collecting evidence.
+For each of my deployment, I went and launched an EC2 instance using my saved launch template in AWS Oregon (`us-west-2`). I wrote down the public IPv4 addresses for all of them, connected using SSH method through Git Bash, ran `seir-dashboard` in Git Bash, captured my screenshots then finally terminated the instance once I was finished.
 
 ## 3. Understanding the Dashboard
 
-- **CPU:** Shows how much processing power the instance is using.
-- **Memory:** Shows how much RAM is in use.
-- **Disk:** Shows how much storage is being used.
-- **Uptime:** Shows how long the system has been running since it started.
+- **CPU:** Displays how much processing power the instance is using.
+- **Memory:** Displays how much RAM is in use.
+- **Disk:** Displays how much storage is being used.
+- **Uptime:** Displays how long the system has been running since starting.
 
 ## 4. What Became Easier
 
 Repeating the deployment process made it easier to launch instances from my template, find public IP addresses, connect through SSH, and display the dashboard.
 
-## 5. Errors and Troubleshooting
+## 5. Troubleshooting and issues
 
-I initially had SSH connection difficulties. I resolved them by using Git Bash and specifying my SSH private key when connecting.
+I did have some SSH connection difficulties. I was able to solve them by using Git Bash and specifying my SSH private key when I tried to connect.
 
 ## 6. Cleanup
 
-I terminated all three practice instances after collecting evidence. I retained my launch template and checked for leftover EBS volumes and Elastic IP addresses.
+I terminated all three practice instances after capturing my information. I kept my launch template and checked for leftover EBS volumes that might be still lingering. 
 
