@@ -12,7 +12,10 @@ Public IPv4: 52.11.2.190
 
 Deployment 2
 
-Public IPv4: 35.90.51.199
+### Deployment 2
+
+**Public IPv4:** `35.90.51.199`
+
 ![Deployment 2 Screenshot](Screenshots/35.90-2.png)
 
 
