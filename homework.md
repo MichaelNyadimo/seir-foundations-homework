@@ -2,11 +2,11 @@
 
 ## 1. Deployment Evidence
 
-| Deployment | Public IPv4 Address | Connection Method | Screenshot | Terminated? |
+| Deployment | Public IPv4 | Connection | Screenshot | Terminated? |
 |---|---|---|---|---|
-| 1 | 52.11.2.190 | SSH via Git Bash | `Screenshots/seir52.11-2.png`| Yes |
-| 2 | 35.90.51.199 | SSH via Git Bash | `Screenshots/35.90-3.png` | Yes |
-| 3 | 35.88.76.206 | SSH via Git Bash | `Screenshots/35.88.76.20-2.png` | Yes |
+| 1 | 52.11.2.190 | SSH via Git Bash | ![Deployment 1](c:\Users\micha\Downloads\seir52.11-2.png) | Yes |
+| 2 | 35.90.51.199 | SSH via Git Bash | ![Deployment 2](c:\Users\micha\Downloads\35.90-2.png) | Yes |
+| 3 | 35.88.76.206 | SSH via Git Bash | ![Deployment 3](c:\Users\micha\Downloads\35.88.76.20-2.png) | Yes |
 
 ## 2. What I Did
 
