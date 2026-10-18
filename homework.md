@@ -2,12 +2,23 @@
 
 ## 1. Deployment Evidence
 
-| Deployment | Public IPv4 | Connection | Screenshot | Terminated? |
-|---|---|---|---|---|
-| 1 | 52.11.2.190 | SSH via Git Bash | ![Deployment 1](c:\Users\micha\Downloads\seir52.11-2.png) | Yes |
-| 2 | 35.90.51.199 | SSH via Git Bash | ![Deployment 2](c:\Users\micha\Downloads\35.90-2.png) | Yes |
-| 3 | 35.88.76.206 | SSH via Git Bash | ![Deployment 3](c:\Users\micha\Downloads\35.88.76.20-2.png) | Yes |
+## Deployment 1
 
+**Public IPv4:** `52.11.2.190`
+
+![Deployment 1 Screenshot](screenshots/seir52.11-2.png)
+
+## Deployment 2
+
+**Public IPv4:** `35.90.51.199`
+
+![Deployment 2 Screenshot](screenshots/35.90-2.png)
+
+## Deployment 3
+
+**Public IPv4:** `35.88.76.206`
+
+![Deployment 3 Screenshot](screenshots/35.88.76.20-2.png)
 ## 2. What I Did
 
 For each of my deployment, I went and launched an EC2 instance using my saved launch template in AWS Oregon (`us-west-2`). I wrote down the public IPv4 addresses for all of them, connected using SSH method through Git Bash, ran `seir-dashboard` in Git Bash, captured my screenshots then finally terminated the instance once I was finished.
