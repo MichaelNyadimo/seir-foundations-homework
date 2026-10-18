@@ -1,16 +1,14 @@
 # SEIR Foundations — Lab 0: Your First EC2 Dashboard
 
+
 ## 1. Deployment Evidence
 
-1. Deployment Evidence
+### Deployment 1
 
-Deployment 1
-
-Public IPv4: 52.11.2.190
+**Public IPv4:** `52.11.2.190`
 ![Deployment 1 Screenshot](Screenshots/seir52.11-2.png)
 
 
-Deployment 2
 
 ### Deployment 2
 
@@ -19,9 +17,9 @@ Deployment 2
 ![Deployment 2 Screenshot](Screenshots/35.90-2.png)
 
 
-Deployment 3
+### Deployment 3
 
-Public IPv4: 35.88.76.206
+**Public IPv4:** `35.88.76.206`
 ![Deployment 3 Screenshot](Screenshots/35.88.76.20-2.png)
 
 ## 2. What I Did
