@@ -1,30 +1,8 @@
 # SEIR Foundations — Lab 0: Your First EC2 Dashboard
 
-
-## 1. Deployment Evidence
-
-### Deployment 1
-
-**Public IPv4:** `52.11.2.190`
-![Deployment 1 Screenshot](Screenshots/seir52.11-2.png)
-
-
-
-### Deployment 2
-
-**Public IPv4:** `35.90.51.199`
-
-![Deployment 2 Screenshot](Screenshots/35.90-2.png)
-
-
-### Deployment 3
-
-**Public IPv4:** `35.88.76.206`
-![Deployment 3 Screenshot](Screenshots/35.88.76.20-2.png)
-
 | **Deployment** | **Public IPv4 address** | **Connection method** | **Screenshot** | **Instance terminated?** |
 |---|---|---|---|---|
-| 1 | `16.144.39.95` | SSH (Git Bash) | **Screenshot 1**<br><img src="Screenshots/seir52.11-2.png" width="200" alt="Deployment 1 screenshot"> | Yes |
+| 1 | `52.11.2.190` | SSH (Git Bash) | **Screenshot 1**<br><img src="Screenshots/seir52.11-2.png" width="200" alt="Deployment 1 screenshot"> | Yes |
 | 2 | `35.90.51.199` | SSH (Git Bash) | **Screenshot 2**<br><img src="Screenshots/35.90-2.png" width="200" alt="Deployment 2 screenshot"> | Yes |
 | 3 | `35.88.76.206` | SSH (Git Bash) | **Screenshot 3**<br><img src="Screenshots/35.88.76.20-2.png" width="200" alt="Deployment 3 screenshot"> | Yes |
 
