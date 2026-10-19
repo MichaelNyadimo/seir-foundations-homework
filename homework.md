@@ -24,7 +24,7 @@
 
 ## 2. What I Did
 
-For each of my deployment, I went and launched an EC2 instance using my saved launch template in AWS Oregon (`us-west-2`). I wrote down the public IPv4 addresses for all of them, connected using SSH method through Git Bash, ran `seir-dashboard` in Git Bash, captured my screenshots then finally terminated the instance once I was finished.
+For each of my deployments, I went and launched an EC2 instance 3 times using my saved launch template in AWS Oregon (`us-west-2`). I wrote down the public IPv4 addresses for all of them, connected using SSH method through Git Bash and ran `seir-dashboard` in Git Bash. After that, I captured my screenshots then finally terminated the instance once I was finished.
 
 ## 3. Understanding the Dashboard
 
