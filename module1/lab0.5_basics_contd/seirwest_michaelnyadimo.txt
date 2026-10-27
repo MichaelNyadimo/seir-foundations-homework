@@ -1,0 +1,3 @@
+Spotter = John Williams
+Teammates = John Williams, John Williams, Tony Gentry
+Days + Times when your team meets = Mon + Wed 7:00 PM MT
