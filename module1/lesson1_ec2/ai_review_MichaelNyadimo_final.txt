@@ -1,0 +1,66 @@
+# AI Review — Lesson 1
+
+## Question 1: What does an EC2 ID tell you, and what does it not tell you?
+
+**AI answer:**
+An EC2 instance ID is a unique identifier AWS assigns to an instance. It helps you identify and track a specific deployment. However, it does not tell you whether the instance is running properly, whether you can connect to it, or whether the application hosted on it is working.
+
+**How I checked it:**
+I compared the seven instance IDs in my lab notes. Each deployment had a different ID. I also recorded application checks separately, showing that identifying an instance and verifying its application are two different things.
+
+## Question 2: What is `echo $?` meant to do, and why is it useful?
+
+**AI answer:**
+The Linux command `echo $?` displays the exit status of the most recently executed command. A return code of `0` generally means the command succeeded, while a nonzero code indicates some type of error or other outcome. It is useful because it helps determine whether a command completed successfully without having to guess from the terminal output.
+
+**How I checked it:**
+I used `echo $?` after running the COBOL payment practice commands and recorded the return codes alongside their results.
+
+## Question 3: What do codes 0, 4, 8, and 12 mean after running the payment practice?
+
+**AI answer:**
+In the Lesson 1 payment practice:
+
+- `0` — Payment posted successfully; account approved.
+- `4` — Payment rejected because the account could not be found.
+- `8` — Payment rejected because there were insufficient funds.
+- `12` — Payment rejected because the request was malformed or missing required information.
+
+These meanings apply to the payment practice program; they are not universal meanings for every COBOL application.
+
+**How I checked it:**
+I compared the return codes with the actual output from my payment commands. For example, transaction `TXN-MN-0008` returned code 0 and showed `STATUS=POSTED` and `REASON=APPROVED`. Running the program without arguments returned code 12 and displayed a usage message.
+
+## Question 4: Why should you make sure an application works instead of just assuming it's fine based on EC2 launch status?
+
+**AI answer:**
+An EC2 instance launching successfully only confirms that AWS has started the virtual machine. It does not guarantee that the application has started correctly or is accessible. You need to connect to the instance, run the application, and verify that it responds as expected.
+
+**How I checked it:**
+During my seven EC2 runs, I performed application checks and captured screenshots. This helped me understand why verifying the application is important instead of relying only on the EC2 instance launch status.
+
+## Question 5: What can go wrong if your network settings are not correct?
+
+**AI answer:**
+Incorrect network settings can prevent you from connecting to an EC2 instance or accessing an application. For example, an incorrect security group rule could block SSH traffic on port 22 or prevent access to an application using port 8000. The instance might be running normally, but users would still be unable to reach it.
+
+**How I checked it:**
+I documented having to repeat setup steps, including checking port 8000. I also learned from my spotter to remember to configure port 8000 under EC2 networking settings. The AWS security group settings and screenshots would provide additional evidence of the exact configuration.
+
+## Example of where the AI answer was too specific / not fully supported
+
+In Question 3, the AI described return code 12 as meaning that the request was malformed or was missing required information. My lab notes support the first part: when I ran `./cobol/bin/payment_post` without arguments, the program returned code 12, displayed `STATUS=REJECTED` and `REASON=MALFORMED REQUEST`, and showed a usage message. However, my notes do not establish that every code-12 case specifically means required information was missing. That wording went beyond the evidence I had recorded.
+
+**How I checked it:** I compared the AI's explanation with the exact command and output in my COBOL practice notes. The command with no arguments and the displayed malformed-request reason support describing this test as a malformed request, but they do not prove every possible cause of return code 12. I therefore narrowed the explanation to what my actual test demonstrated. I also treated these return-code meanings as specific to this payment practice program, not to all COBOL programs.
+
+## Additional example: AI was vague about the port 8000 network setting
+
+**What I asked the AI:**
+I asked where I should put the port 8000 network setting for my EC2 lab and how the setting should be configured.
+
+**What was vague or missing in the AI's answer:**
+The AI explained that port 8000 needed to be allowed in the EC2 networking or security group settings, but it was not clear enough about what I should enter in the source or IP-address field.
+
+**How I checked it:**
+I went back to the EC2 security group inbound-rule settings and considered the Source field separately from the port number. I learned that the source controls which IP addresses are allowed to reach the port. For a personal lab connection, the safer choice is generally to restrict access to My IP instead of just anywhere.
+
