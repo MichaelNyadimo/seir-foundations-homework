@@ -13,11 +13,11 @@ Numbers + sources:
 - (PostgreSQL, 2025: primary database object types and concepts).
 
 === Topic 2: COBOL ===
-Read:    (title + link)
-Watched: (title + link)
+Read: What Is COBOL? — IBM
+Watched: COBOL Programming Course — Open Mainframe Project
 AI used: chatgpt
-Prompt(s) I asked the AI:
-One thing the AI said that I double-checked, and what I found:
+Prompt(s) I asked the AI: What is COBOL used for? 
+One thing the AI said that I double-checked, and what I found: Used in banking and government organizations.
 
 Paragraph (minimum 5 sentences):COBOL as an acronymn stands for Common Business-Oriented Language and was created in 1959. Some contributions were made by the government and computer scientist grace hopper.
 COBOL is still used in banking, government and other industries that depend on large transaction-processing systems. To replace COBOL would be very difficult considering that it depends on decades of business logic. COBOL has been connected to newer technologies instead of replacing so many things.
@@ -28,11 +28,11 @@ Numbers + sources:
 - (IBM, 2024: COBOL's decades of continued use).
 
 === Topic 3:SWIFT ===
-Read:    (title + link)
-Watched: (title + link)
+Read: ISO 20022 — SWIFT
+Watched: ISO 20022 Tutorials — Deutsche Bank
 AI used: chatgpt
-Prompt(s) I asked the AI:
-One thing the AI said that I double-checked, and what I found:SWIFT does not directly transfer money by using instructions.Swift is heavily secure and encrypted.
+Prompt(s) I asked the AI: What has changed about SWIFT over the years?
+One thing the AI said that I double-checked, and what I found: SWIFT does not directly transfer money by using instructions. Swift is heavily secure and encrypted.
 
 Paragraph (minimum 5 sentences):SWIFT is a financial messaging network established in 1973 to help financial institutions communicate securely.
 SWIFT does not directly transfer money; it sends standardized payment instructions between financial institutions.
@@ -44,16 +44,15 @@ Numbers + sources:
 - (SWIFT, 2024: year the SWIFT network was established).
 
 ===API===
-
-Read:    (title + link)
-Watched: (title + link)
+Read: What Is an API? — IBM
+Watched: What Is an API? — U.S. General Services Administration
 AI used: chatgpt
-Prompt(s) I asked the AI:
-One thing the AI said that I double-checked, and what I found:
+Prompt(s) I asked the AI: Why are API's important?
+One thing the AI said that I double-checked, and what I found: That API's use HTTP methods to gather information. They use GET to gather information as well as POST to send it.
 
 Paragraph (minimum 5 sentences):An API will allow different software applications to talk to and exchange information.
 REST APIs will use HTTP methods such as GET to obtain information and POST to submit it. 
-JSON is a common method for exchanging information between dofferent applications.
+JSON is a common method for exchanging information between different applications.
 APIs are important to cloud computing and AI because they let applications connect to external services and models.
 They also must validate incoming information and use authentication to prevent and security issue.
 
@@ -61,11 +60,11 @@ Numbers + sources:
 - (IBM Technology, 2024: APIs enable communication between software applications).
 
 ===5. The Intersection of COBOL, SWIFT, APIs, and Databases===
-Read:    (title + link)
-Watched: (title + link)
+Read: Agencies Need to Plan for Modernizing Critical Decades-Old Legacy Systems — U.S. GAO (2025)
+Watched: Creating APIs for Legacy Mainframe Applications — OpenLegacy
 AI used: chatgpt
-Prompt(s) I asked the AI:
-One thing the AI said that I double-checked, and what I found:
+Prompt(s) I asked the AI: How are all these technologies relevant today?
+One thing the AI said that I double-checked, and what I found: They all work together to process transactions, send payments and gather information to put in databases. I found that it was true and that they also have integrated with newer technologies to be more efficient.
 
 Paragraph (minimum 5 sentences):COBOL, SWIFT, APIs, and databases work together in many financial systems.
 
