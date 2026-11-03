@@ -1,0 +1,77 @@
+=== Topic 1: Databases ===
+Read: AWS Relational vs Non relational https://aws.amazon.com/compare/the-difference-between-relational-and-non-relational-databases/?utm_source=chatgpt.com
+Watched: IBM Technology vs No SQL https://www.youtube.com/watch?v=Q5aTUc7c4jg&utm_source=chatgpt.com
+AI used: Chatgpt
+Prompt(s) I asked the AI: Can you explain what a company should keep in mind when choosing a database?
+One thing the AI said that I double-checked, and what I found:The structure of the data structure and performance requirements. 
+
+Paragraph (minimum 5 sentences): Databases are meant to store an organize information o that the applications can use it.
+Relational databases can organize information into tables to make it easier to read things like bank transactions. 
+SQL databases are common for structured business applications.
+
+Numbers + sources:
+- (number) — (source, year)
+
+=== Topic 2: COBOL ===
+Read:    (title + link)
+Watched: (title + link)
+AI used: ?
+Prompt(s) I asked the AI:
+One thing the AI said that I double-checked, and what I found:
+
+Paragraph (minimum 5 sentences):COBOL as an acronymn stands for Common Business-Oriented Language and was created in 1959. Some contributions were made by the government and computer scientist grace hopper.
+COBOL is still used in banking, government and other industries that depend on large transaction-processing systems. To replace COBOL would be very difficult considering that it depends on decades of business logic. COBOL has been connected to newer technologies instead of replacing so many things.
+
+
+Numbers + sources:
+- (number) — (source, year)
+
+===SWIFT===
+Read:    (title + link)
+Watched: (title + link)
+AI used: ?
+Prompt(s) I asked the AI:
+One thing the AI said that I double-checked, and what I found:SWIFT does not directly transfer money by using instructions.Swift is heavily secure and encrypted.
+
+Paragraph (minimum 5 sentences):SWIFT is a financial messaging network established in 1973 to help financial institutions communicate securely.
+SWIFT does not directly transfer money; it sends standardized payment instructions between financial institutions.
+ISO 20022 is a financial messaging standard that provides more structured information than older message formats.
+MT103 and MT202 messages have corresponding ISO 20022 formats known as pacs.008 and pacs.009.
+The SWIFT coexistence period for cross-border payment instructions ended on November 22, 2025, requiring the relevant traffic to transition to ISO 20022
+
+Numbers + sources:
+- (number) — (source, year)
+
+===API===
+
+Read:    (title + link)
+Watched: (title + link)
+AI used: ?
+Prompt(s) I asked the AI:
+One thing the AI said that I double-checked, and what I found:
+
+Paragraph (minimum 5 sentences):An API allows different software applications to communicate and exchange information.
+REST APIs commonly use HTTP methods such as GET to retrieve information and POST to submit information.
+JSON is a common format for exchanging structured information between applications.
+APIs are important to cloud computing and AI because they allow applications to connect with external services and models.
+APIs must validate incoming information and use proper authentication and authorization to prevent security problems.
+
+Numbers + sources:
+- (number) — (source, year)
+
+===5. The Intersection of COBOL, SWIFT, APIs, and Databases===
+Read:    (title + link)
+Watched: (title + link)
+AI used: ?
+Prompt(s) I asked the AI:
+One thing the AI said that I double-checked, and what I found:
+
+Paragraph (minimum 5 sentences):COBOL, SWIFT, APIs, and databases work together in many financial systems.
+
+COBOL can process banking transactions while databases store customer and account information.
+SWIFT communicates payment instructions between financial institutions, while APIs connect applications and services.
+Healthcare, education, and government organizations also depend on databases and older applications to manage important records.
+APIs help organizations modernize legacy systems by connecting older technology to newer cloud applications without immediately replacing everything.
+
+Numbers + sources:
+- (number) — (source, year)
