@@ -50,11 +50,11 @@ AI used: ?
 Prompt(s) I asked the AI:
 One thing the AI said that I double-checked, and what I found:
 
-Paragraph (minimum 5 sentences):An API allows different software applications to communicate and exchange information.
-REST APIs commonly use HTTP methods such as GET to retrieve information and POST to submit information.
-JSON is a common format for exchanging structured information between applications.
-APIs are important to cloud computing and AI because they allow applications to connect with external services and models.
-APIs must validate incoming information and use proper authentication and authorization to prevent security problems.
+Paragraph (minimum 5 sentences):An API will allow different software applications to talk to and exchange information.
+REST APIs will use HTTP methods such as GET to obtain information and POST to submit it. 
+JSON is a common method for exchanging information between dofferent applications.
+APIs are important to cloud computing and AI because they let applications connect to external services and models.
+They also must validate incoming information and use authentication to prevent and security issue.
 
 Numbers + sources:
 - (number) — (source, year)
