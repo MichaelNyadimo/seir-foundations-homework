@@ -1,12 +1,12 @@
-Spotter = ?   (the person who spots YOU)
+Spotter = John Williams (the person who spots YOU)
 5 things my spotter learned while working on the lab / homework:
-1. 
-2. ?
-3. ?
-4. ?
-5. ?
+1) EC2 server can have packages (cobol, python, etc) uploaded and run just like on our vs code
+2) User script is what enables the labs to open the applications we have on different ports. I.e. HTTP script in there to open up Dusty Cloud engineer on webpage. Same for port 8000 use
+3) Cobol is an old language that is still heavily utilized in financial, government, healthcare industries and hard for these industries to transfer to another language.
+4) COBOL is the basis of the SWIFT System
+5) web server and SSH serve can serve to do the same functions. Its a matter of interface.
 
-I am the spotter for = ?   (the person YOU spot)
+I am the spotter for = John Williams  (the person YOU spot)
 5 things I learned that I shared with them:
 1. I had to remember to put 8000 under custom TCP
 2. I need to put source type to IPV4 for port 8000
