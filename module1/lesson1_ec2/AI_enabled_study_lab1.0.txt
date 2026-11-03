@@ -10,12 +10,12 @@ Relational databases can organize information into tables to make it easier to r
 SQL databases are common for structured business applications.
 
 Numbers + sources:
-- (number) — (source, year)
+- (PostgreSQL, 2025: primary database object types and concepts).
 
 === Topic 2: COBOL ===
 Read:    (title + link)
 Watched: (title + link)
-AI used: ?
+AI used: chatgpt
 Prompt(s) I asked the AI:
 One thing the AI said that I double-checked, and what I found:
 
@@ -24,12 +24,13 @@ COBOL is still used in banking, government and other industries that depend on l
 
 
 Numbers + sources:
-- (number) — (source, year)
+- (IBM, 2024: COBOL's development and introduction)
+- (IBM, 2024: COBOL's decades of continued use).
 
-===SWIFT===
+=== Topic 3:SWIFT ===
 Read:    (title + link)
 Watched: (title + link)
-AI used: ?
+AI used: chatgpt
 Prompt(s) I asked the AI:
 One thing the AI said that I double-checked, and what I found:SWIFT does not directly transfer money by using instructions.Swift is heavily secure and encrypted.
 
@@ -40,13 +41,13 @@ MT103 and MT202 messages are similar to the ISO 20022 formats which are pacs.008
 The SWIFT coexistence period for cross-border payment instructions ended recently on November 22, 2025, requiring the the important traffic to transition to ISO 20022. 
 
 Numbers + sources:
-- (number) — (source, year)
+- (SWIFT, 2024: year the SWIFT network was established).
 
 ===API===
 
 Read:    (title + link)
 Watched: (title + link)
-AI used: ?
+AI used: chatgpt
 Prompt(s) I asked the AI:
 One thing the AI said that I double-checked, and what I found:
 
@@ -57,12 +58,12 @@ APIs are important to cloud computing and AI because they let applications conne
 They also must validate incoming information and use authentication to prevent and security issue.
 
 Numbers + sources:
-- (number) — (source, year)
+- (IBM Technology, 2024: APIs enable communication between software applications).
 
 ===5. The Intersection of COBOL, SWIFT, APIs, and Databases===
 Read:    (title + link)
 Watched: (title + link)
-AI used: ?
+AI used: chatgpt
 Prompt(s) I asked the AI:
 One thing the AI said that I double-checked, and what I found:
 
@@ -74,4 +75,4 @@ Government oganizations also depend on databases and older applications to manag
 APIs can help organizations modernize legacy systems by connecting older technology like COBOL to newer cloud applications without reeplacing every single thing.
 
 Numbers + sources:
-- (number) — (source, year)
+- (U.S. GAO, 2025: critical federal legacy systems identified for modernization).
