@@ -1,0 +1,15 @@
+Spotter = ?   (the person who spots YOU)
+5 things my spotter learned while working on the lab / homework:
+1. 
+2. ?
+3. ?
+4. ?
+5. ?
+
+I am the spotter for = ?   (the person YOU spot)
+5 things I learned that I shared with them:
+1. I had to remember to put 8000 under custom TCP
+2. I need to put source type to IPV4 for port 8000
+3. I had to remember to type echo $ everytime after the cobol commands
+4. That I could launch my instance from a template 
+5. Remember to install Git each time

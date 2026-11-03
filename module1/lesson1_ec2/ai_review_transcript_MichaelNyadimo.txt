@@ -1,0 +1,76 @@
+**Michael:** What does an EC2 ID tell me, and what does it not tell me?
+
+**ChatGPT:** An EC2 instance ID is a unique identifier AWS assigns to each virtual machine. It allows you to identify and track a specific instance, including distinguishing one lab deployment from another. However, the ID itself does not tell you whether the instance is functioning correctly, whether the application is running, or whether you can connect to it.
+
+**Michael:** I had seven deployments. Should each one have a different instance ID?
+
+**ChatGPT:** Yes. Each newly launched EC2 instance receives its own unique instance ID. You can use those IDs to match your deployment records, screenshots, and AWS console information.
+
+### Conversation 2: Linux Exit Codes
+
+**Michael:** What is `echo $?` meant to do, and why is it useful?
+
+**ChatGPT:** The command `echo $?` displays the exit status of the command you ran immediately before it. A value of `0` generally means the command completed successfully. A nonzero value indicates an error or another program-specific result. It is useful because it lets you check the outcome of a command without relying only on what appears on the screen.
+
+**Michael:** So I should run it immediately after the command I want to check?
+
+**ChatGPT:** Correct. If you run another command first, `echo $?` will show the exit status of that newer command instead.
+
+### Conversation 3: COBOL Payment Return Codes
+
+**Michael:** What do codes 0, 4, 8, and 12 mean after running the payment practice?
+
+**ChatGPT:** Based on the Lesson 1 payment practice, the return codes correspond to these results:
+
+- `0`: Payment posted successfully.
+- `4`: Payment not found.
+- `8`: Insufficient funds.
+- `12`: Malformed request.
+
+These meanings apply to the payment practice program, not necessarily to other COBOL applications.
+
+**Michael:** My transaction `TXN-MN-0008` returned code 0. What does that mean?
+
+**ChatGPT:** Your recorded output showed `STATUS=POSTED` and `REASON=APPROVED`. That indicates the payment was successfully processed by the practice program.
+
+### Conversation 4: Verifying an Application
+
+**Michael:** Why should I make sure an application works instead of just assuming it's fine based on EC2 launch status?
+
+**ChatGPT:** An EC2 instance showing a successful launch only confirms that AWS started the virtual machine. It does not guarantee that the application running inside it started successfully. You need to perform an application-level check to confirm that the service responds as expected.
+
+**Michael:** So even if AWS says the instance is running, I still need to check the dashboard?
+
+**ChatGPT:** Exactly. Checking the dashboard or running the application command provides evidence that the application itself is working, rather than just the underlying virtual machine.
+
+### Conversation 5: EC2 Networking
+
+**Michael:** What can go wrong if my network settings are not correct?
+
+**ChatGPT:** Incorrect networking settings can prevent you from connecting to your EC2 instance or accessing an application. For example, a security group that does not allow inbound traffic on the required port can block access even when the instance is running.
+
+**Michael:** I was having trouble with port 8000. Where does that need to be configured?
+
+**ChatGPT:** Port 8000 needs to be allowed in the EC2 instance's security group inbound rules if your application uses that port. You also need to configure the source to determine which IP addresses can connect. For a personal lab, restricting the source to your own IP address is generally safer than allowing traffic from anywhere.
+
+---
+
+### Additional Review: Where ChatGPT Needed Correction
+
+**Michael:** You said return code 12 could mean missing required information. How do I know that's actually what it means?
+
+**ChatGPT:** The exact meaning should be verified against the payment program's output or documentation. In your recorded test, running `./cobol/bin/payment_post` without arguments returned code 12 and displayed `REASON=MALFORMED REQUEST`. That supports describing this particular test as a malformed request, but it does not establish every possible reason the program might return code 12.
+
+**Michael:** So I shouldn't assume that every code 12 means missing information?
+
+**ChatGPT:** Correct. It is better to report only what your actual test demonstrated.
+
+### Additional Review: Port 8000
+
+**Michael:** Your explanation about port 8000 was vague. What exactly does the Source field mean?
+
+**ChatGPT:** The Source field in an inbound security group rule determines which IP addresses or networks are permitted to connect to the specified port. Choosing My IP restricts access to your current public IP address, while allowing traffic from anywhere is broader and less restrictive.
+
+**Michael:** I checked the security group settings and learned that I needed to pay attention to both the port and the source.
+
+**ChatGPT:** That's right. The port determines which service can receive traffic, while the source determines who is allowed to reach it.

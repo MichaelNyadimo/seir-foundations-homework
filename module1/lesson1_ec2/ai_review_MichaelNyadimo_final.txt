@@ -1,17 +1,18 @@
-# AI Review — Lesson 1
+AI used = Chatgpt
+Conversation share link = (or "see ai_review_transcript_MichaelNyadimo")
 
 ## Question 1: What does an EC2 ID tell you, and what does it not tell you?
 
 **AI answer:**
-An EC2 instance ID is a unique identifier AWS assigns to an instance. It helps you identify and track a specific deployment. However, it does not tell you whether the instance is running properly, whether you can connect to it, or whether the application hosted on it is working.
+The instance ID for an EC2 is an identifier that AWS assigns to an instance. It helps you keep track of specific deployments. It does not tell you whether the instance is running the right way or if you can connect to it.
 
 **How I checked it:**
-I compared the seven instance IDs in my lab notes. Each deployment had a different ID. I also recorded application checks separately, showing that identifying an instance and verifying its application are two different things.
+I compared the seven instance IDs in my lab notes and each deployment had a different ID. 
 
 ## Question 2: What is `echo $?` meant to do, and why is it useful?
 
 **AI answer:**
-The Linux command `echo $?` displays the exit status of the most recently executed command. A return code of `0` generally means the command succeeded, while a nonzero code indicates some type of error or other outcome. It is useful because it helps determine whether a command completed successfully without having to guess from the terminal output.
+The Linux command `echo $?` displays the end status of the most recent command. 0 means the succeeded meanwhile a nonzero means it failed.
 
 **How I checked it:**
 I used `echo $?` after running the COBOL payment practice commands and recorded the return codes alongside their results.
@@ -21,20 +22,18 @@ I used `echo $?` after running the COBOL payment practice commands and recorded 
 **AI answer:**
 In the Lesson 1 payment practice:
 
-- `0` — Payment posted successfully; account approved.
-- `4` — Payment rejected because the account could not be found.
-- `8` — Payment rejected because there were insufficient funds.
-- `12` — Payment rejected because the request was malformed or missing required information.
-
-These meanings apply to the payment practice program; they are not universal meanings for every COBOL application.
+- `0` — The payment has posted successfully
+- `4` — Rejected because payment is not found.
+- `8` — Rejected due to no funds.
+- `12` — Rejected due to little information.
 
 **How I checked it:**
-I compared the return codes with the actual output from my payment commands. For example, transaction `TXN-MN-0008` returned code 0 and showed `STATUS=POSTED` and `REASON=APPROVED`. Running the program without arguments returned code 12 and displayed a usage message.
+I compared the return codes with the actual output from my payment commands. My `TXN-MN-0008` returned code 0 and showed `STATUS=POSTED` and `REASON=APPROVED`. 
 
 ## Question 4: Why should you make sure an application works instead of just assuming it's fine based on EC2 launch status?
 
 **AI answer:**
-An EC2 instance launching successfully only confirms that AWS has started the virtual machine. It does not guarantee that the application has started correctly or is accessible. You need to connect to the instance, run the application, and verify that it responds as expected.
+An EC2 instance that launched successfully only means that AWS has started the virtual machine. It does not mean that the instance has started correctly. This is why we have to double check to see that it responded correctly. 
 
 **How I checked it:**
 During my seven EC2 runs, I performed application checks and captured screenshots. This helped me understand why verifying the application is important instead of relying only on the EC2 instance launch status.
@@ -42,7 +41,7 @@ During my seven EC2 runs, I performed application checks and captured screenshot
 ## Question 5: What can go wrong if your network settings are not correct?
 
 **AI answer:**
-Incorrect network settings can prevent you from connecting to an EC2 instance or accessing an application. For example, an incorrect security group rule could block SSH traffic on port 22 or prevent access to an application using port 8000. The instance might be running normally, but users would still be unable to reach it.
+Incorrect network settings can stop you from connecting to an EC2 instance due to an error in things like your security group.
 
 **How I checked it:**
 I documented having to repeat setup steps, including checking port 8000. I also learned from my spotter to remember to configure port 8000 under EC2 networking settings. The AWS security group settings and screenshots would provide additional evidence of the exact configuration.
