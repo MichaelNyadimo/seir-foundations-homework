@@ -1,0 +1,29 @@
+
+NETWORK ARCHITECTURE
+Name: Michael Nyadimo
+AWS Region: us-east-1 (N. Virginia)
+VPC CIDR: 10.1.0.0/16
+
+AVAILABILITY ZONES
+AZ-A: us-east-1a
+AZ-B: us-east-1b
+AZ-C: us-east-1c
+
+PUBLIC SUBNETS
+Public Subnet A: 10.1.1.0/24 — us-east-1a
+Public Subnet B: 10.1.2.0/24 — us-east-1b
+Public Subnet C: 10.1.3.0/24 — us-east-1c
+
+PRIVATE TIER 1 SUBNETS
+Private Subnet 1A: 10.1.11.0/24 — us-east-1a
+Private Subnet 1B: 10.1.12.0/24 — us-east-1b
+Private Subnet 1C: 10.1.13.0/24 — us-east-1c
+
+PRIVATE TIER 2 SUBNETS
+Private Subnet 2A: 10.1.21.0/24 — us-east-1a
+Private Subnet 2B: 10.1.22.0/24 — us-east-1b
+Private Subnet 2C: 10.1.23.0/24 — us-east-1c
+
+WHY I DESIGNED IT THIS WAY
+
+I selected a /16 CIDR block for my VPC because it provides a large private address space for organizing multiple subnets and future workloads. Each subnet uses a /24 CIDR block, providing 256 total IP addresses before AWS reserves five addresses in each subnet. AWS reserves five IPv4 addresses per subnet for networking purposes, leaving 251 usable addresses. The three public subnets are distributed across three Availability Zones to support availability and redundancy. The private subnets are organized into two tiers, with one subnet per tier in each Availability Zone. The second octet identifies my overall VPC network, while the third octet helps identify the subnet's tier and Availability Zone. This organization makes the network easier to understand, manage, and expand.
