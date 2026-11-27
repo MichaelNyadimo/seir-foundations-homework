@@ -100,10 +100,10 @@ Deploying an EC2 instance in each of the three public subnets demonstrates how A
 - [ ] Subnetting practice completed (20 questions)
 - [ ] Lesson 4 notes completed
 - [ ] README evidence table finalized
-- [ ] All three EC2 instances terminated
-- [ ] EBS volumes checked
-- [ ] Elastic IPs checked
-- [ ] VPC deleted
+- [x] All three EC2 instances terminated
+- [x] EBS volumes checked
+- [x] Elastic IPs checked
+- [x] VPC deleted
 
 ## 9. AWS Cleanup
 
