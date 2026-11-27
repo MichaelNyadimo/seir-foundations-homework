@@ -80,7 +80,7 @@ Deploying an EC2 instance in each of the three public subnets demonstrates how A
 | public_subnet_a.jpg | Captured |
 | public_subnet_b.jpg | Captured |
 | public_subnet_c.jpg | Captured |
-| binary_game_high_score.jpg | Pending |
+| binary_game_high_score.jpg | Captured |
 
 ## 8. Homework Checklist
 
