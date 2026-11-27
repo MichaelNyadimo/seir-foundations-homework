@@ -108,13 +108,13 @@ Deploying an EC2 instance in each of the three public subnets demonstrates how A
 ## 9. AWS Cleanup
 
 **EC2 Instances:**
-- michael-public-a — Pending termination
-- michael-public-b — Pending termination
-- michael-public-c — Pending termination
+- michael-public-a — terminated
+- michael-public-b — terminated
+- michael-public-c — terminated
 
-**EBS Volumes:** Pending verification
+**EBS Volumes:** checked
 
-**Elastic IPs:** Pending verification
+**Elastic IPs:** checked
 
 **VPC:** Pending deletion
 
