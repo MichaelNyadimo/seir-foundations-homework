@@ -52,7 +52,7 @@ Deploying an EC2 instance in each of the three public subnets demonstrates how A
 
 **Hardest Part of the VPC Design:**
 
-[Write 2–3 sentences describing the hardest part of designing or configuring your VPC.]
+The hardest part of the VPC design was planning the subnet CIDR ranges so that all nine subnets fit within the VPC without overlapping. I also had to make sure the public subnets were configured with the correct route table and internet access while keeping the private subnets separate. Deploying the EC2 instances across three Availability Zones helped me understand how the network design supports availability and organization.
 
 ## 5. Cisco Binary Game
 
