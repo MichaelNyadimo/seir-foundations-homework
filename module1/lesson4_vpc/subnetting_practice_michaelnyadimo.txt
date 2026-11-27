@@ -1,0 +1,368 @@
+
+Lesson 4 — Subnetting Practice
+
+Theo Practice Questions (1–7)
+
+1. Convert 21 and 23 to binary.
+
+21 = 00010101
+
+Work: 16 + 4 + 1 = 21.
+
+23 = 00010111
+
+Work: 16 + 4 + 2 + 1 = 23.
+
+2. Identify the tier and AZ for 10.20.12.50.
+
+Answer: Private 1, AZ B.
+
+Explanation: 10.20.12.50 belongs to subnet 10.20.12.0/24, which is in the Private 1 tier and AZ B.
+
+3. Calculate the mask, total addresses, and AWS assignable addresses for /26.
+
+Binary mask: 11111111.11111111.11111111.11000000
+
+Subnet mask: 255.255.255.192
+
+Work:
+
+32 - 26 = 6 host bits.
+
+2^6 = 64 total addresses.
+
+64 - 5 = 59 AWS assignable addresses.
+
+Answer: 255.255.255.192, 64 total addresses, 59 assignable addresses.
+
+4. Does 10.20.13.0/24 overlap 10.20.0.0/20?
+
+Answer: Yes, they overlap.
+
+Explanation: 10.20.0.0/20 covers third-octet values 0–15. The subnet 10.20.13.0/24 falls within that range.
+
+5. Is 172.31.255.254 RFC 1918? What about 172.32.0.1?
+
+172.31.255.254: Yes, private.
+
+172.32.0.1: No, not private.
+
+Explanation: The RFC 1918 range is 172.16.0.0 through 172.31.255.255.
+
+6. Why can an EC2 instance in a public subnet connect to a private Aurora instance without a NAT Gateway?
+
+Answer: Both resources are inside the same VPC. AWS provides a local route that allows communication between VPC subnets. The Aurora security group must allow the EC2 instance's traffic. A NAT Gateway is not needed because the connection does not go through the internet.
+
+7. Divide 10.20.50.0/24 into four /26 networks.
+
+Work:
+
+Borrow 2 bits because 2^2 = 4.
+
+24 + 2 = /26.
+
+Each /26 contains 64 total addresses.
+
+Answer:
+
+10.20.50.0/26
+
+10.20.50.64/26
+
+10.20.50.128/26
+
+10.20.50.192/26
+
+Easy Questions (8–12)
+
+8. Convert 192 to binary.
+
+Work: 128 + 64 = 192.
+
+Answer: 11000000.
+
+9. Convert 00101101 to decimal.
+
+Work: 32 + 8 + 4 + 1 = 45.
+
+Answer: 45.
+
+10. How many total addresses are in a /28? How many can you use in AWS?
+
+Work:
+
+32 - 28 = 4 host bits.
+
+2^4 = 16 total addresses.
+
+16 - 5 = 11 AWS usable addresses.
+
+Answer: 16 total, 11 usable.
+
+11. Class A private range: 10.0.0.0/8. What are the first and last addresses? Is 10.255.255.254 private? Is 11.0.0.1?
+
+First address: 10.0.0.0
+
+Last address: 10.255.255.255
+
+10.255.255.254: Private because it falls within 10.0.0.0/8.
+
+11.0.0.1: Not private because it falls outside that range.
+
+Fixed line: My first answer for the first address was 10.0.0.1. The correct first address is 10.0.0.0.
+
+12. Write the /20 subnet mask in dotted decimal. Show the binary first.
+
+Binary: 11111111.11111111.11110000.00000000
+
+Answer: 255.255.240.0.
+
+Medium Questions (13–17)
+
+13. Instance: 10.20.37.200/22. Find the network address, last address, AWS usable range, and number of usable addresses.
+
+Work:
+
+The /22 mask is 255.255.252.0.
+
+The third-octet block size is 4.
+
+The largest multiple of 4 at or below 37 is 36.
+
+Network address: 10.20.36.0
+
+Last address: 10.20.39.255
+
+AWS usable range: 10.20.36.4 – 10.20.39.254
+
+Number of usable addresses:
+
+32 - 22 = 10 host bits.
+
+2^10 = 1,024 total addresses.
+
+1,024 - 5 = 1,019 usable addresses.
+
+Answer: Network 10.20.36.0/22; last address 10.20.39.255; usable range 10.20.36.4–10.20.39.254; 1,019 usable addresses.
+
+Fixed line: The initial network boundary was incorrectly identified as 32. The correct boundary is 36 because 36 is the largest multiple of 4 at or below 37.
+
+14. VPC: 10.84.0.0/16. Which possible subnets are valid?
+
+a) 10.84.4.0/22 — VALID individually.
+
+b) 10.84.6.0/23 — VALID individually.
+
+c) 10.84.5.0/23 — INVALID because 5 is not a multiple of 2.
+
+d) 10.85.0.0/24 — INVALID because it is outside the VPC range.
+
+Explanation:
+
+A /22 subnet must start at a multiple of 4 in the third octet.
+
+A /23 subnet must start at a multiple of 2.
+
+All subnets must be inside the VPC CIDR.
+
+The two individually valid subnets overlap:
+
+10.84.4.0/22 covers 10.84.4.0–10.84.7.255.
+
+10.84.6.0/23 covers 10.84.6.0–10.84.7.255.
+
+They cannot both be used in the same VPC because their address ranges overlap.
+
+15. Need at least 500 usable AWS addresses. Find the smallest subnet.
+
+Work:
+
+500 + 5 = 505 total addresses needed.
+
+2^9 = 512 addresses.
+
+32 - 9 = /23.
+
+512 - 5 = 507 usable addresses.
+
+A /24 only provides 256 total addresses and 251 usable addresses, so it is too small.
+
+Answer: /23.
+
+Fixed line: My first estimate was 100. The correct minimum is 505 total addresses, requiring a /23 subnet.
+
+16. Split 10.84.10.0/24 into 8 equal subnets.
+
+Work:
+
+2^3 = 8, so borrow 3 bits.
+
+24 + 3 = /27.
+
+Each /27 has 32 total addresses.
+
+Answer:
+
+10.84.10.0/27
+
+10.84.10.32/27
+
+10.84.10.64/27
+
+10.84.10.96/27
+
+10.84.10.128/27
+
+10.84.10.160/27
+
+10.84.10.192/27
+
+10.84.10.224/27
+
+17. Mask: 255.255.255.224. Find the prefix, total addresses, and AWS usable addresses.
+
+Work:
+
+224 in binary = 11100000.
+
+8 + 8 + 8 + 3 = 27 bits.
+
+Prefix = /27.
+
+32 - 27 = 5 host bits.
+
+2^5 = 32 total addresses.
+
+32 - 5 = 27 usable addresses.
+
+Answer: /27, 32 total addresses, 27 AWS usable addresses.
+
+Hard Questions (18–20)
+
+18. VPC: 10.50.0.0/16. Create 3 public subnets with at least 200 usable addresses and 6 private subnets with at least 1,000 usable addresses across 3 AZs.
+
+Public subnet calculation:
+
+200 + 5 = 205 total addresses needed.
+
+A /24 provides 256 total and 251 usable addresses.
+
+Private subnet calculation:
+
+1,000 + 5 = 1,005 total addresses needed.
+
+A /22 provides 1,024 total and 1,019 usable addresses.
+
+A /23 only provides 512 total and 507 usable, so it is too small.
+
+Answer:
+
+Subnet
+
+CIDR
+
+AZ
+
+Public A
+
+10.50.0.0/24
+
+AZ-a
+
+Public B
+
+10.50.1.0/24
+
+AZ-b
+
+Public C
+
+10.50.2.0/24
+
+AZ-c
+
+Private A
+
+10.50.4.0/22
+
+AZ-a
+
+Private B
+
+10.50.8.0/22
+
+AZ-b
+
+Private C
+
+10.50.12.0/22
+
+AZ-c
+
+Private D
+
+10.50.16.0/22
+
+AZ-a
+
+Private E
+
+10.50.20.0/22
+
+AZ-b
+
+Private F
+
+10.50.24.0/22
+
+AZ-c
+
+The subnets use valid boundaries, do not overlap, and are distributed across three Availability Zones.
+
+Fixed line: I initially chose /23 for the private subnets. The correct prefix is /22 because /23 does not provide enough usable addresses. I also initially answered /30 when asked for the next starting block; the correct next block begins at third-octet value 8.
+
+19. Longest Prefix Match routing.
+
+Routes:
+
+10.20.0.0/16 → local
+
+10.30.0.0/16 → VPC Peering (pcx-0abc)
+
+0.0.0.0/0 → Internet Gateway (igw-0abc)
+
+Answers:
+
+a) 10.20.22.81 → 10.20.0.0/16 → local.
+
+b) 10.30.4.4 → 10.30.0.0/16 → VPC Peering.
+
+c) 8.8.8.8 → 0.0.0.0/0 → Internet Gateway.
+
+d) 10.99.0.5 → 0.0.0.0/0 → Internet Gateway route selected.
+
+Explanation: AWS selects the most specific matching route. The default route catches destinations that do not match a more specific route. Although the default route is selected for 10.99.0.5, that address is private and is not reachable over the public internet through the Internet Gateway.
+
+Fixed line: My first answer for destination d was route 2. The correct route selection is route 3 because 10.99.0.5 does not belong to either of the two /16 networks.
+
+20. On-premises network: 10.0.0.0/12. Which VPC CIDRs are safe and do not overlap?
+
+a) 10.20.0.0/16 — SAFE, no overlap.
+
+b) 10.8.0.0/16 — OVERLAPS.
+
+c) 10.15.0.0/16 — OVERLAPS.
+
+d) 10.16.0.0/12 — SAFE, no overlap.
+
+Explanation:
+
+10.0.0.0/12 covers 10.0.0.0 through 10.15.255.255.
+
+10.20.0.0/16 is outside that range.
+
+10.8.0.0/16 and 10.15.0.0/16 fall inside that range.
+
+10.16.0.0/12 covers 10.16.0.0 through 10.31.255.255, so it does not overlap.
+
+Fixed line: My first answer for option a was yes, but it is safe because 20 is outside the 0–15 range. My first answer for option d was yes, but it is safe because its range starts at 16, immediately after the on-premises range ends at 15.
