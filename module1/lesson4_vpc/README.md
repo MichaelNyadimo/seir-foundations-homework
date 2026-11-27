@@ -96,9 +96,9 @@ Deploying an EC2 instance in each of the three public subnets demonstrates how A
 - [x] Three EC2 web pages verified
 - [x] Three public subnet screenshots captured
 - [ ] Maarek Section 27 quiz screenshot saved
-- [ ] Cisco Binary Game screenshot saved
-- [ ] Subnetting practice completed (20 questions)
-- [ ] Lesson 4 notes completed
+- [x] Cisco Binary Game screenshot saved
+- [x] Subnetting practice completed (20 questions)
+- [x] Lesson 4 notes completed
 - [ ] README evidence table finalized
 - [x] All three EC2 instances terminated
 - [x] EBS volumes checked
